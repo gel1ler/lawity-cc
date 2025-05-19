@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+header {
+    height: 100px;
+    background: #303030;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+

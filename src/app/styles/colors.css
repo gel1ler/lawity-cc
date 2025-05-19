@@ -1,0 +1,73 @@
+.purp-dark {
+    background: #7B448E;
+}
+
+.purp-main {
+    background: #8F4EA6;
+}
+
+.purp-main-20 {
+    background: #8f4ea633;
+}
+
+.black-main {
+    background: #303030;
+}
+
+.light-gray {
+    background: #F5F5F5;
+}
+
+.white {
+    background: #FFFFFF;
+}
+
+.gray {
+    background: #B3B3B3;
+}
+
+.dark-gray {
+    background: #939393;
+}
+
+.black-light {
+    background: #606060;
+}
+
+
+/* Text */
+.text-purp-dark {
+    color: #7B448E;
+}
+
+.text-purp-main {
+    color: #8F4EA6;
+}
+
+.text-black-main {
+    color: #303030;
+}
+
+.text-purp-main-20 {
+    color: rgba(143, 78, 166, 0.2); /* 8F4EA6 с 20% прозрачности */
+}
+
+.ltext-ight-gray {
+    color: #F5F5F5;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-gray {
+    color: #B3B3B3;
+}
+
+.text-dark-gray {
+    color: #939393;
+}
+
+.text-black-light {
+    color: #606060;
+}
