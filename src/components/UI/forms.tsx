@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-export const Input = ({ text, placeholder, value, setValue }: { text?: string, placeholder: string, value: string, setValue: (val: string) => void }) => (
+export const Input = ({ placeholder, value, setValue }: { placeholder: string, value: string, setValue: (val: string) => void }) => (
     <input
         value={value}
         onChange={e => setValue(e.target.value)}
@@ -31,7 +29,7 @@ export const Checkbox = ({ label, checked, onChange }: { label: string, checked:
     </label>
 );
 
-export const PhoneInput = ({ placeholder, value, setValue }: { text?: string, placeholder: string, value: string, setValue: (val: string) => void }) => {
+export const PhoneInput = ({ placeholder, value, setValue }: { placeholder: string, value: string, setValue: (val: string) => void }) => {
     const formatPhoneNumber = (input: string) => {
         // Удаляем все нецифровые символы
         const cleaned = input.replace(/\D/g, '');
