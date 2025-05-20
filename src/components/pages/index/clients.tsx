@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const Card = ({ num, title, text }: { num: number, title: string, text: string }) =>
-    <div className="rounded-2xl px-3 py-6 shadowed flex flex-col gap-2 items-center max-w-[300px] black-main">
+    <div className="rounded-2xl px-3 py-6 shadowed flex flex-col gap-2 items-center max-w-[300px] bg-black-main">
         <Image
             src={`/clients/${num}.png`}
             alt="Icon"
@@ -21,7 +21,7 @@ const Clients = () => {
             <OverTitle>Для юристов и адвокатов</OverTitle>
             <H className='text-white' level={2}>Клиенты под ключ</H>
             <p className='text-lg'>Комплексные решения для юридических практик любого масштаба</p>
-            <div className="flex justify-between pt-10 pb-20 w-full max-w-[1100px] z-10">
+            <div className="flex justify-center pt-10 pb-20 z-10 gap-10 relative">
                 <Card
                     num={1}
                     title='Полный цикл обслуживания'
@@ -37,15 +37,17 @@ const Clients = () => {
                     title='Автоматизация рутины'
                     text='Автоматизируем рутинные задачи, чтобы вы могли сосредоточиться на главном — работе с клиентами'
                 />
+
+                <Image
+                    className='absolute -right-[400px] -bottom-[100px] overflow-visible -z-10'
+                    src={`/logo/text.svg`}
+                    alt="Lawity bg"
+                    width={1000}
+                    height={680}
+                />
             </div>
 
-            <Image
-                className='absolute -bottom-[100px] -right-[100px]'
-                src={`/logo/text.svg`}
-                alt="Lawity bg"
-                width={1000}
-                height={680}
-            />
+
         </WidthAnimatedSection>
     )
 }

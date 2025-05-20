@@ -1,8 +1,11 @@
+import Partners from "@/components/pages/index/partners";
 import Clients from "@/components/pages/index/clients";
+import Crm from "@/components/pages/index/crm";
 import Outsource from "@/components/pages/index/outsource";
 import Priorities from "@/components/pages/index/priorities";
 import Start from "@/components/pages/index/start";
 import { Metadata } from "next";
+import Contacts from "@/components/pages/contacts";
 
 export const metadata: Metadata = {
   title: "Lawity колл-центр",
@@ -11,11 +14,14 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className=" light-gray flex flex-col items-center">
+    <main className="bg-light-gray flex flex-col items-center">
       <Start />
       <Priorities />
       <Clients />
       <Outsource />
+      <Crm />
+      <Partners />
+      <Contacts />
     </main>
   );
 }

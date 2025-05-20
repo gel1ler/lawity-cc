@@ -14,7 +14,7 @@ const Element = ({ reverse, title, text, num, btn }: { reverse?: boolean, btn?: 
             alt={title}
         />
         <div className={`flex flex-col max-w-[400px] ${reverse ? 'col-start-1 row-start-1' : ''}`}>
-            <H className=' text-purp-dark' style={{ fontWeight: 'bolder' }} level={3}>{title}</H>
+            <H bold className='text-purp-dark' level={3}>{title}</H>
             <p className='text-lg'>{text}</p>
             {btn ? <Button mt={1} /> : null}    
         </div>

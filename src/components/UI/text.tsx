@@ -16,12 +16,13 @@ export const LinkText = ({ children, href }: { children: ReactNode, href: Url })
 interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   level: 1 | 2 | 3 | 4 | 5 | 6;
   children: React.ReactNode;
+  bold?: boolean
 }
 
-export const H = ({ level, children, className = '', ...props }: HeadingProps) => {
+export const H = ({ level, children, bold, className = '', ...props }: HeadingProps) => {
   const Tag = `h${level}` as const;
 
-  const baseStyles = 'my-3 text-gray-800';
+  const baseStyles = 'my-3';
   const levelStyles = {
     1: 'text-5xl font-bold',
     2: 'text-4xl font-semibold',
@@ -32,13 +33,13 @@ export const H = ({ level, children, className = '', ...props }: HeadingProps) =
   };
 
   return (
-    <Tag className={`${baseStyles} ${levelStyles[level]} ${className}`} {...props}>
+    <Tag className={`${baseStyles} ${levelStyles[level]} ${className}`} {...props} style={bold ? { fontWeight: 600 } : {}}>
       {children}
     </Tag>
   );
 };
 
 export const OverTitle = ({ transparent, children }: { transparent?: boolean, children: ReactNode }) =>
-  <p className={`px-3 py-1 rounded-full font-[600] ${transparent ? 'purp-main-20 text-purp-dark' : 'purp-dark'}`}>
+  <p className={`px-3 py-1 rounded-full w-fit font-[600] ${transparent ? 'bg-purp-main-20 text-purp-dark' : 'bg-purp-dark'}`}>
     {children}
   </p>

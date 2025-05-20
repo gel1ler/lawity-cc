@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+    --color-purp-dark: #7B448E;
+    --color-purp-main: #8F4EA6;
+    --color-purp-main-20: #8F4EA633;
+    --color-black-main: #303030;
+    --color-black-light: #606060;
+    --color-light-gray: #F5F5F5;
+    --color-gray: #B3B3B3;
+    --color-dark-gray: #939393;
+    --color-white: #FFFFFF;
+    --color-gray-line: #DEDEDE;
+}
+
+body {
+    position: relative;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.font-inter {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.shadowed {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    @apply text-gray-line;
+}

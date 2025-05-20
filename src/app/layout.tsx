@@ -1,8 +1,10 @@
 import { Raleway } from "next/font/google";
-import "./styles/globals.css";
+import "./globals.css";
 import "./styles/colors.css";
+import "./styles/anims.css";
 import '@/components/layout/layout.css'
 import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 const raleway = Raleway({
   subsets: ["latin", "cyrillic"],
@@ -20,11 +22,10 @@ export default function RootLayout({
         <link rel='image/svg+xml' href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body>
+      <body className="w-screen overflow-x-hidden">
         <Header />
         {children}
-        {/* Contacts */}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
