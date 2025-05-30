@@ -4,8 +4,20 @@ header {
     height: 100px;
     background: #303030;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Центрируем внутренний контейнер */
     align-items: center;
     color: white;
 }
 
+.header-container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.flex-col-center-till-lg {
+    @apply flex flex-col items-center lg:items-start;
+}

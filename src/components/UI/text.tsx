@@ -2,11 +2,15 @@ import { Url } from 'next/dist/shared/lib/router/router'
 import Link from 'next/link'
 import React, { ReactNode } from 'react'
 
+interface LinkTextProps extends React.HTMLAttributes<HTMLParagraphElement> {
+  children: React.ReactNode;
+  href: Url
+}
 
-export const LinkText = ({ children, href }: { children: ReactNode, href: Url }) => {
+export const LinkText = ({ children, href, className = '', onClick }: LinkTextProps) => {
   return (
     <Link href={href}>
-      <p className='hover:text-purple-300 transition-colors'>
+      <p className='hover:text-purple-300 transition-colors' onClick={onClick}>
         {children}
       </p>
     </Link>
@@ -33,7 +37,11 @@ export const H = ({ level, children, bold, className = '', ...props }: HeadingPr
   };
 
   return (
-    <Tag className={`${baseStyles} ${levelStyles[level]} ${className}`} {...props} style={bold ? { fontWeight: 600 } : {}}>
+    <Tag
+      className={`${baseStyles} ${levelStyles[level]} ${className} text-center lg:text-left`}
+      {...props}
+      style={bold ? { fontWeight: 600 } : {}}
+    >
       {children}
     </Tag>
   );

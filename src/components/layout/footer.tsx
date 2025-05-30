@@ -8,7 +8,7 @@ type TLink = {
 }
 
 const BigLink = ({ href = '#', children }: TLink) =>
-    <a href={href} className='flex w-full justify-between group'>
+    <a href={href} className='flex ml-[30px] lg:ml-0 lg:w-full justify-between group text-center lg:text-left'>
         <p className='text-xl'>{children}</p>
         <Image
             width={30}
@@ -20,7 +20,7 @@ const BigLink = ({ href = '#', children }: TLink) =>
     </a>
 
 const SmallLink = ({ href = '#', children }: TLink) =>
-    <a href={href} className='text-lg text-gray-500 hover:text-gray-800 transition'>
+    <a href={href} className='text-lg text-gray-500 hover:text-gray-800 transition text-center lg:text-left'>
         {children}
     </a>
 
@@ -29,8 +29,8 @@ const SmallTitle = ({ children }: { children: ReactNode }) => <p className="text
 const Footer = () => {
     return (
         <footer className="bg-white container mx-auto px-4 pt-20 pb-10">
-            <div className="grid grid-cols-3 gap-20 items-center pb-10">
-                <div className="flex flex-col col-start-1 col-end-3 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 items-center pb-10 justify-center">
+                <div className="flex flex-col lg:col-start-1 lg:col-end-3 gap-4">
                     <Image
                         src="/logo/text-large.svg"
                         alt="Lawity Call Center"
@@ -39,16 +39,16 @@ const Footer = () => {
                         className="object-contain"
                     />
 
-                    <div className="grid grid-cols-3 gap-10">
-                        <div>
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+                        <div className='flex-col-center-till-lg'>
                             <SmallTitle>О компании</SmallTitle>
-                            <p className="text-lg text-gray-500 max-w-md">
+                            <p className="text-lg text-gray-500 max-w-md text-center lg:text-left">
                                 Мы предоставляем комплексные решения для юридических практик, помогая оптимизировать
                                 рабочие процессы и повышать эффективность.
                             </p>
                         </div>
 
-                        <div className='flex flex-col gap-1 ml-5'>
+                        <div className='gap-1 ml-5 flex-col-center-till-lg'>
                             <SmallTitle>Услуги</SmallTitle>
                             <SmallLink>Клиенты под ключ</SmallLink>
                             <SmallLink>Аутсорсинг колл-центра</SmallLink>
@@ -56,7 +56,7 @@ const Footer = () => {
                             <SmallLink>Тарифы и услуги</SmallLink>
                         </div>
 
-                        <div className='flex flex-col gap-1'>
+                        <div className='gap-1 flex-col-center-till-lg'>
                             <SmallTitle>Информация</SmallTitle>
                             <SmallLink>Клиенты и кейсы</SmallLink>
                             <SmallLink>Аутсорсинг</SmallLink>
@@ -65,7 +65,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col gap-4'>
+                <div className='gap-4 flex-col-center-till-lg'>
                     <H level={2}>Познакомтесь ближе c экосистемой Lawity</H>
                     <BigLink>CRM-система для юристов</BigLink>
                     <hr />
