@@ -5,18 +5,21 @@ import Image from 'next/image'
 import React from 'react'
 
 const Element = ({ reverse, title, text, num, btn }: { reverse?: boolean, btn?: boolean, title: string, text: string, num: number }) =>
-    <div className={`grid grid-cols-2 items-center gap-10 ${reverse ? 'grid-flow-dense' : ''}`}>
+    <div className={`
+        flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'}
+        items-center gap-8 md:gap-16 w-full p-10 rounded-2xl shadow-md
+     `}>
         <Image
             src={`/priorities/${num}.svg`}
-            className={`${reverse ? 'col-start-2' : ''}`}
+            className={`${reverse ? 'col-start-2' : ''} max-w-[40vw]`}
             width={500}
             height={500}
             alt={title}
         />
-        <div className={`flex flex-col max-w-[400px] ${reverse ? 'col-start-1 row-start-1' : ''}`}>
+        <div className={`flex flex-col max-w-[400px] ${reverse ? 'col-start-1 row-start-1' : ''} items-center lg:items-start`}>
             <H bold className='text-purp-dark' level={3}>{title}</H>
-            <p className='text-lg'>{text}</p>
-            {btn ? <Button mt={1} /> : null}    
+            <p className='text-lg text-left-adapt'>{text}</p>
+            {btn ? <Button mt={1} /> : null}
         </div>
     </div>
 
@@ -24,7 +27,7 @@ const Priorities = () => {
     return (
         <WidthAnimatedSection background='white'>
             <H level={2}>Наш главный приоритет</H>
-            <div className="flex flex-col max-w-[1000px] items-center">
+            <div className="flex flex-col max-w-[1000px] items-center gap-20 lg:gap-0">
                 <Element
                     title='Стабильность и гарантия результата'
                     text='Мы не просто обрабатываем звонки – мы обеспечиваем надежность и качество на каждом этапе взаимодействия'
@@ -35,6 +38,7 @@ const Priorities = () => {
                     width={538}
                     height={129}
                     alt='Curve'
+                    className='hidden md:block'
                 />
                 <Element
                     title='Старт за 24 часа'
@@ -47,6 +51,7 @@ const Priorities = () => {
                     width={418}
                     height={136}
                     alt='Curve'
+                    className='hidden md:block'
                 />
                 <Element
                     title='Мы с Вами более 5 лет!'

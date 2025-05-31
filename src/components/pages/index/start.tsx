@@ -5,14 +5,24 @@ import React from 'react'
 
 const Start = () => {
     return (
-        <div className='flex justify-center gap-10 items-center pt-20 pb-[90vh] bg-light-gray'>
-            <div className="flex flex-col">
+        <div
+            className='flex justify-center gap-10 items-center pt-20 pb-[90vh] bg-light-gray px-10 relative'
+        >
+            <Image
+                className="absolute inset-0 bg-no-repeat bg-contain bg-center pointer-events-none opacity-30"
+                src='/start.svg'
+                width={400}
+                height={380}
+                alt='bg'
+            />
+            <div className="flex flex-col items-center md:items-start z-10">
                 <H level={1}>Рекламный колл-центр</H>
                 <H level={4}>Индивидуальный подход – гарантированный результат</H>
                 <Button />
             </div>
-            <Image 
+            <Image
                 src='/start.svg'
+                className='hidden lg:visible'
                 alt='Start'
                 width={500}
                 height={485}

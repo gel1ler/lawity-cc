@@ -21,7 +21,12 @@ const Clients = () => {
             <OverTitle>Для юристов и адвокатов</OverTitle>
             <H className='text-white' level={2}>Клиенты под ключ</H>
             <p className='text-lg'>Комплексные решения для юридических практик любого масштаба</p>
-            <div className="flex justify-center pt-10 pb-20 z-10 gap-10 relative">
+            <div
+                className="
+                    flex justify-center pt-10 pb-20 z-10 gap-10 relative
+                    flex-col lg:flex-row
+                "
+            >
                 <Card
                     num={1}
                     title='Полный цикл обслуживания'
