@@ -9,6 +9,7 @@ interface Props {
     container?: 'lg' | 'md';
     row?: boolean;
     noPb?: boolean;
+    noBorder?: boolean;
     className?: string;
 }
 
@@ -19,9 +20,9 @@ const containerWidth = {
     'lg': 1300
 };
 
-const WidthAnimatedSection = ({ background, children, color, container, row, noPb, className = '' }: Props) => {
+const WidthAnimatedSection = ({ background, children, color, container, row, noPb, noBorder, className = '' }: Props) => {
     const ref = useRef<HTMLElement>(null);
-     const [isLargeScreen, setIsLargeScreen] = useState(false);
+    const [isLargeScreen, setIsLargeScreen] = useState(false);
 
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -46,8 +47,8 @@ const WidthAnimatedSection = ({ background, children, color, container, row, noP
     return (
         <motion.section
             ref={ref}
-            className={`rounded-t-[50px] pt-10 ${noPb ? 'pb-20' : 'pb-[90vh]'} -mt-[80vh] overflow-hidden 
-                border-gray-line border-t border-l border-r max-w-screen z-10
+            className={`rounded-t-[20px] lg:rounded-t-[50px] pt-10 ${noPb ? 'pb-20' : 'pb-[90vh]'} -mt-[80vh] overflow-hidden 
+                max-w-screen z-10 ${noBorder ? '' : 'border-gray-line border-t border-l border-r'}
                 ${className}`}
             style={{
                 background,

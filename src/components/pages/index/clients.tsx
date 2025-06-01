@@ -4,23 +4,25 @@ import Image from 'next/image'
 import React from 'react'
 
 const Card = ({ num, title, text }: { num: number, title: string, text: string }) =>
-    <div className="rounded-2xl px-3 py-6 shadowed flex flex-col gap-2 items-center max-w-[300px] bg-black-main">
+    <div className="rounded-2xl px-3 py-6 flex flex-col gap-2 items-center max-w-[300px] bg-black-main 
+        shadowed-white
+     ">
         <Image
             src={`/clients/${num}.png`}
             alt="Icon"
             width={50}
             height={50}
         />
-        <H className='text-white text-center' level={3}>{title}</H>
+        <H className='text-white' level={3}>{title}</H>
         <p className='text-center -mt-1'>{text}</p>
     </div>
 
 const Clients = () => {
     return (
-        <WidthAnimatedSection background='#303030' color='white'>
+        <WidthAnimatedSection background='#303030' color='white' noBorder>
             <OverTitle>Для юристов и адвокатов</OverTitle>
             <H className='text-white' level={2}>Клиенты под ключ</H>
-            <p className='text-lg'>Комплексные решения для юридических практик любого масштаба</p>
+            <p className='text-lg text-left-adapt'>Комплексные решения для юридических практик любого масштаба</p>
             <div
                 className="
                     flex justify-center pt-10 pb-20 z-10 gap-10 relative

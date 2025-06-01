@@ -16,7 +16,7 @@ export const Checkbox = ({ label, checked, onChange }: { label: string, checked:
             onChange={onChange}
             className="hidden"
         />
-        <span className={`w-5 h-5 border-2 rounded-sm mr-2 flex items-center justify-center transition-colors 
+        <span className={`w-5 h-5 border-2 rounded-sm mr-2 flex items-center justify-center transition-colors aspect-square
       ${checked ? 'bg-purp-main border-purp-main' : 'border-gray-400'}`}
         >
             {checked && (
@@ -25,7 +25,7 @@ export const Checkbox = ({ label, checked, onChange }: { label: string, checked:
                 </svg>
             )}
         </span>
-        <span className="text-gray-700">{label}</span>
+        <p className="text-gray-700 text-sm">{label}</p>
     </label>
 );
 

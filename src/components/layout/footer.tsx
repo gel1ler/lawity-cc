@@ -48,7 +48,7 @@ const Footer = () => {
                             </p>
                         </div>
 
-                        <div className='gap-1 ml-5 flex-col-center-till-lg'>
+                        <div className='gap-1 ml-0 lg:ml-5 flex-col-center-till-lg'>
                             <SmallTitle>Услуги</SmallTitle>
                             <SmallLink>Клиенты под ключ</SmallLink>
                             <SmallLink>Аутсорсинг колл-центра</SmallLink>

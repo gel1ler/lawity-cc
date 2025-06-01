@@ -9,7 +9,9 @@ const Start = () => {
             className='flex justify-center gap-10 items-center pt-20 pb-[90vh] bg-light-gray px-10 relative'
         >
             <Image
-                className="absolute inset-0 bg-no-repeat bg-contain bg-center pointer-events-none opacity-30"
+                className="inset-0 bg-no-repeat bg-contain bg-center pointer-events-none
+                absolute opacity-30 
+                lg:hidden"
                 src='/start.svg'
                 width={400}
                 height={380}
@@ -22,7 +24,7 @@ const Start = () => {
             </div>
             <Image
                 src='/start.svg'
-                className='hidden lg:visible'
+                className='hidden lg:block'
                 alt='Start'
                 width={500}
                 height={485}

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import { LinkText } from '../UI/text'
-import Drawer from './header/drawer';
+import { LinkText } from '../../UI/text'
+import Drawer from './drawer';
 import { TLink } from '@/globalTypes';
 
 const links: TLink[] = [
@@ -33,13 +33,13 @@ const Header = () => {
 
                 <div className="flex gap-5 items-center">
                     <Image
-                        className='hidden md:visible'
+                        className='hidden md:block'
                         src='/social/tg.svg'
                         width={30}
                         height={30}
                         alt='Telegram' />
                     <Image
-                        className='hidden md:visible'
+                        className='hidden md:block'
                         src='/social/wa.svg'
                         width={30}
                         height={30}

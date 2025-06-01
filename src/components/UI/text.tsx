@@ -20,10 +20,12 @@ export const LinkText = ({ children, href, className = '', onClick }: LinkTextPr
 interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   level: 1 | 2 | 3 | 4 | 5 | 6;
   children: React.ReactNode;
-  bold?: boolean
+  bold?: boolean,
+  noCenter?: boolean,
+
 }
 
-export const H = ({ level, children, bold, className = '', ...props }: HeadingProps) => {
+export const H = ({ level, children, bold, className = '', noCenter, ...props }: HeadingProps) => {
   const Tag = `h${level}` as const;
 
   const baseStyles = 'my-3';
@@ -38,7 +40,7 @@ export const H = ({ level, children, bold, className = '', ...props }: HeadingPr
 
   return (
     <Tag
-      className={`${baseStyles} ${levelStyles[level]} ${className} text-center lg:text-left`}
+      className={`${baseStyles} ${levelStyles[level]} ${className} ${noCenter ? '' : 'text-center'} lg:text-left`}
       {...props}
       style={bold ? { fontWeight: 600 } : {}}
     >
