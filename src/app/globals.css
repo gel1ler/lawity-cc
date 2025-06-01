@@ -40,3 +40,33 @@ hr {
 .text-left-adapt {
     @apply text-center lg:text-left;
 }
+
+.slick-prev::before,
+.slick-next::before {
+  color: #303030 !important; /* blue-800 */
+  font-size: 1.5rem !important;
+  opacity: 1 !important;
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 999px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.slick-prev {
+  left: 25px !important;
+}
+
+.slick-next {
+  right: 25px !important;
+}

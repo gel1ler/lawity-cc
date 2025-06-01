@@ -5,7 +5,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const Card = ({ num, title, text, wide }: { num: number, title: string, text: string, wide?: boolean }) =>
-    <div className={`rounded-2xl px-4 py-6 shadowed flex flex-col items-center lg:items-start bg-white ${wide ? 'md:col-span-2' : ''}`}>
+    <div className={`rounded-2xl px-4 py-6 shadowed flex flex-col items-center lg:items-start bg-white ${wide ? 'lg:col-span-2' : ''} w-full`}>
         <Image
             src={`/outsource/${num}.svg`}
             alt="Icon"
@@ -28,9 +28,9 @@ const Outsource = () => {
                     <p className='mt-2 text-lg text-left-adapt'>
                         Доверьте обработку звонков профессионалам и сосредоточьтесь на юридической практике. Наш колл-центр работает 24/7, обеспечивая непрерывную связь с вашими клиентами
                     </p>
-                    <Button mt={1}>Заказать услугу</Button>
+                    <Button mt={1} className='hidden lg:block'>Заказать услугу</Button>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-2xl">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 max-w-2xl justify-items-center">
                     <Card
                         num={1}
                         title='Обработка звонков 24/7'
@@ -47,6 +47,7 @@ const Outsource = () => {
                         text='Гибкие тарифные планы, адаптированные под любые задачи и бюджет вашей юридической практики.'
                         wide
                     />
+                    <Button mt={1} className='lg:hidden block'>Заказать услугу</Button>
                 </div>
             </div>
         </WidthAnimatedSection>

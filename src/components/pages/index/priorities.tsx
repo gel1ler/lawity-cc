@@ -8,7 +8,6 @@ const Element = ({ reverse, title, text, num, btn }: { reverse?: boolean, btn?: 
     <div className={`
         flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'}
         items-center gap-8 md:gap-16 w-full p-10 rounded-2xl 
-        shadow-md md:shadow-none
      `}>
         <Image
             src={`/priorities/${num}.svg`}

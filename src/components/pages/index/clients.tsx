@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const Card = ({ num, title, text }: { num: number, title: string, text: string }) =>
-    <div className="rounded-2xl px-3 py-6 flex flex-col gap-2 items-center max-w-[300px] bg-black-main 
+    <div className="rounded-2xl px-3 py-6 flex flex-col gap-2 items-center max-w-[300px] bg-black-main
         shadowed-white
      ">
         <Image
@@ -46,7 +46,10 @@ const Clients = () => {
                 />
 
                 <Image
-                    className='absolute -right-[400px] -bottom-[100px] overflow-visible -z-10'
+                    className='
+                        absolute overflow-visible -z-10 -right-[400px] -bottom-[100px]
+                        hidden lg:block
+                    '
                     src={`/logo/text.svg`}
                     alt="Lawity bg"
                     width={1000}

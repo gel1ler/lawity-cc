@@ -2,14 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { LinkText } from '../../UI/text'
 import Drawer from './drawer';
-import { TLink } from '@/globalTypes';
-
-const links: TLink[] = [
-    { href: '/#clients', text: 'Клиенты под ключ' },
-    { href: '/#outsource', text: 'Аутсорсинг' },
-    { href: '/#crm', text: 'CRM-Система' },
-    { href: '/#contacts', text: 'Контакты' },
-]
+import { links } from '@/globalData';
 
 const Header = () => {
     return (
