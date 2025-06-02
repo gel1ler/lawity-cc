@@ -38,7 +38,6 @@ const Contacts = () => {
                             <Input placeholder='Ваше имя' value={name} setValue={setName} />
                             <PhoneInput placeholder='+7 (999) 999-99-99' value={phone} setValue={setPhone} />
                             <Checkbox
-                                centered
                                 label='Я соглашаюсь с политикой конфиденциальности'
                                 checked={checked}
                                 onChange={() => setChecked(!checked)}
