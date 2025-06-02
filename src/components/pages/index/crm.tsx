@@ -3,7 +3,7 @@ import { Button } from '@/components/UI/buttons'
 import { H, OverTitle } from '@/components/UI/text'
 import Image from 'next/image'
 import React from 'react'
-import Carousel from './carousel'
+import Carousel from '../../UI/carousel/carousel'
 
 const Item = ({ num, title, text }: { num: number, title: string, text: string }) =>
     <div className="flex items-center gap-4 max-w-xl">

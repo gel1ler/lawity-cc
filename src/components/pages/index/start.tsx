@@ -7,17 +7,17 @@ import React from 'react'
 const Start = () => {
     return (
         <div
-            className='flex justify-center gap-10 items-center pt-20 pb-[90vh] bg-light-gray px-10 relative'
+            className='flex justify-center gap-10 items-center pt-20 pb-[90vh] bg-light-gray px-10 relative w-screen overflow-x-hidden'
         >
             <div className="flex flex-col items-center lg:items-start z-10">
                 <H level={1}>Рекламный колл-центр</H>
                 <H level={4}>Индивидуальный подход – гарантированный результат</H>
-                <div className="flex flex-col lg:hidden gap-6 my-10 items-center">
+                <div className="flex flex-col lg:hidden gap-2 my-10 items-center">
                     {links.map((i, index) => (
                         <LinkText
                             key={index}
                             href={i.href}
-                            className="text-2xl py-2 hover:text-gray-300 transition-colors"
+                            className="text-xl py-2 hover:text-gray-300 transition-colors"
                         >
                             {i.text}
                         </LinkText>

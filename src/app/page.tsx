@@ -1,6 +1,6 @@
 import Partners from "@/components/pages/index/partners";
 import Clients from "@/components/pages/index/clients";
-import Crm from "@/components/pages/index/crm/crm";
+import Crm from "@/components/pages/index/crm";
 import Outsource from "@/components/pages/index/outsource";
 import Priorities from "@/components/pages/index/priorities";
 import Start from "@/components/pages/index/start";

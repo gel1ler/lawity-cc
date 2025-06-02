@@ -9,14 +9,14 @@ export const Input = ({ placeholder, value, setValue }: { placeholder: string, v
 );
 
 export const Checkbox = ({ label, checked, onChange }: { label: string, checked: boolean, onChange: () => void }) => (
-    <label className="inline-flex items-center cursor-pointer">
+    <label className="inline-flex items-center cursor-pointer w-full max-w-full overflow-hidden">
         <input
             type="checkbox"
             checked={checked}
             onChange={onChange}
             className="hidden"
         />
-        <span className={`w-5 h-5 border-2 rounded-sm mr-2 flex items-center justify-center transition-colors aspect-square
+        <span className={`flex-shrink-0 w-5 h-5 border-2 rounded-sm mr-2 flex items-center justify-center transition-colors aspect-square
       ${checked ? 'bg-purp-main border-purp-main' : 'border-gray-400'}`}
         >
             {checked && (
@@ -25,7 +25,9 @@ export const Checkbox = ({ label, checked, onChange }: { label: string, checked:
                 </svg>
             )}
         </span>
-        <p className="text-gray-700 text-sm">{label}</p>
+        <p className="text-gray-700 text-sm whitespace-nowrap overflow-hidden text-ellipsis flex-grow min-w-0">
+            {label}
+        </p>
     </label>
 );
 
