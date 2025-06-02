@@ -21,7 +21,7 @@ const Item = ({ num, title, text }: { num: number, title: string, text: string }
 
 const Crm = () => {
     return (
-        <WidthAnimatedSection background='white' container='lg' noPb>
+        <WidthAnimatedSection background='white' container='lg' noPb id='crm'>
             <OverTitle transparent>Управление практикой</OverTitle>
             <H level={2}>CRM-система для юристов</H>
             <p className='text-lg max-w-2xl text-center'>Специализированное программное обеспечение для эффективного управления юридической практикой</p>

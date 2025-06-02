@@ -3,18 +3,14 @@ import React from 'react'
 import { LinkText } from '../../UI/text'
 import Drawer from './drawer';
 import { links } from '@/globalData';
+import Logo from '@/components/UI/logo';
 
 const Header = () => {
     return (
         <header>
             <div className="header-container">
                 <div className="flex items-center gap-10">
-                    <Image
-                        className='max-w-[70vw]'
-                        src='/logo/horizontal-logo.svg'
-                        width={327}
-                        height={82}
-                        alt='Логотип' />
+                    <Logo />
                     <div className="gap-6 hidden xl:flex">
                         {links.map((i, index) =>
                             <LinkText key={index} href={i.href}>

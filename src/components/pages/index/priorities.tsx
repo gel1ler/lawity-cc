@@ -11,7 +11,7 @@ const Element = ({ reverse, title, text, num, btn }: { reverse?: boolean, btn?: 
      `}>
         <Image
             src={`/priorities/${num}.svg`}
-            className={`${reverse ? 'col-start-2' : ''} max-w-[40vw]`}
+            className={`${reverse ? 'col-start-2' : ''} max-w-[70vw] sm:max-w-[40vw]`}
             width={500}
             height={500}
             alt={title}
@@ -27,7 +27,7 @@ const Priorities = () => {
     return (
         <WidthAnimatedSection background='white'>
             <H level={2}>Наш главный приоритет</H>
-            <div className="flex flex-col max-w-[1000px] items-center gap-20 lg:gap-0">
+            <div className="flex flex-col max-w-[1000px] items-center gap-10 sm:gap-0">
                 <Element
                     title='Стабильность и гарантия результата'
                     text='Мы не просто обрабатываем звонки – мы обеспечиваем надежность и качество на каждом этапе взаимодействия'

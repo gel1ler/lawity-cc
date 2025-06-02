@@ -19,7 +19,7 @@ const Card = ({ num, title, text }: { num: number, title: string, text: string }
 
 const Clients = () => {
     return (
-        <WidthAnimatedSection background='#303030' color='white' noBorder>
+        <WidthAnimatedSection background='#303030' color='white' noBorder id='clients'>
             <OverTitle>Для юристов и адвокатов</OverTitle>
             <H className='text-white' level={2}>Клиенты под ключ</H>
             <p className='text-lg text-left-adapt'>Комплексные решения для юридических практик любого масштаба</p>

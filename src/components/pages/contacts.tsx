@@ -22,6 +22,7 @@ const Contacts = () => {
     return (
         <section
             className='bg-white w-screen'
+            id='contacts'
         >
             <div className="rounded-[50px] pt-10 pb-20 border-gray-line border w-[90vw] mx-auto bg-light-gray">
                 <div

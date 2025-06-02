@@ -20,7 +20,7 @@ const Card = ({ num, title, text, wide }: { num: number, title: string, text: st
 
 const Outsource = () => {
     return (
-        <WidthAnimatedSection background='#F5F5F5' container='lg'>
+        <WidthAnimatedSection background='#F5F5F5' container='lg' id='outsource'>
             <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-5 items-center mt-10">
                 <div className="flex flex-col items-center lg:items-start">
                     <OverTitle transparent>Освободите Ваше время</OverTitle>

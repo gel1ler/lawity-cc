@@ -10,7 +10,7 @@ interface LinkTextProps extends React.HTMLAttributes<HTMLParagraphElement> {
 export const LinkText = ({ children, href, className = '', onClick }: LinkTextProps) => {
   return (
     <Link href={href}>
-      <p className={`hover:text-purple-300 transition-colors ${className}`} onClick={onClick}>
+      <p className={`hover:text-purp-light transition-colors ${className}`} onClick={onClick}>
         {children}
       </p>
     </Link>

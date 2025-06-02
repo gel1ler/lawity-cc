@@ -1,11 +1,27 @@
 'use client'
+import Logo from '@/components/UI/logo'
 import { LinkText } from '@/components/UI/text'
 import { TLink } from '@/globalTypes'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Drawer = ({ links }: { links: TLink[] }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+            document.body.style.touchAction = 'none';
+        } else {
+            document.body.style.overflow = '';
+            document.body.style.touchAction = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+            document.body.style.touchAction = '';
+        };
+    }, [isMenuOpen]);
 
     return (
         <>
@@ -21,8 +37,14 @@ const Drawer = ({ links }: { links: TLink[] }) => {
             </button>
 
             {/* Меню с анимацией */}
-            <div className={`lg:hidden fixed inset-0 z-40 bg-[#303030] transition-all duration-300 ease-in-out ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
-                <div className="container mx-auto px-4 pt-24 flex flex-col gap-6">
+            <div
+                className={`
+                    lg:hidden fixed inset-0 z-40 bg-[#303030] transition-all duration-300 ease-in-out ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}
+                    flex flex-col justify-center
+                `}
+            >
+                <div className="container mx-auto px-4 flex flex-col gap-6 items-center">
+                    <Logo max90 />
                     {links.map((i, index) => (
                         <LinkText
                             key={index}

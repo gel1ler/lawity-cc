@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import Image from 'next/image';
-import { H } from '../UI/text';
+import { H, LinkText } from '../UI/text';
+import { links } from '@/globalData';
 
 type TLink = {
     href?: string,
@@ -50,17 +51,22 @@ const Footer = () => {
 
                         <div className='gap-1 ml-0 lg:ml-5 flex-col-center-till-lg'>
                             <SmallTitle>Услуги</SmallTitle>
-                            <SmallLink>Клиенты под ключ</SmallLink>
-                            <SmallLink>Аутсорсинг колл-центра</SmallLink>
-                            <SmallLink>CRM-система для юристов</SmallLink>
-                            <SmallLink>Тарифы и услуги</SmallLink>
+                            {links.slice(0, -1).map((i, index) => (
+                                <LinkText
+                                    key={index}
+                                    href={i.href}
+                                    className="text-lg text-gray-500 transition text-center lg:text-left"
+                                >
+                                    {i.text}
+                                </LinkText>
+                            ))}
                         </div>
 
                         <div className='gap-1 flex-col-center-till-lg'>
                             <SmallTitle>Информация</SmallTitle>
-                            <SmallLink>Клиенты и кейсы</SmallLink>
-                            <SmallLink>Аутсорсинг</SmallLink>
                             <SmallLink>Часто задаваемые вопросы</SmallLink>
+                            <SmallLink>Политика конфиденциальности</SmallLink>
+                            <SmallLink>Личные данные</SmallLink>
                             <SmallLink>Контакты</SmallLink>
                         </div>
                     </div>
