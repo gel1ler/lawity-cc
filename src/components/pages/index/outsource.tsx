@@ -5,7 +5,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const Card = ({ num, title, text, wide }: { num: number, title: string, text: string, wide?: boolean }) =>
-    <div className={`rounded-2xl px-4 py-6 shadowed flex flex-col items-center lg:items-start bg-white ${wide ? 'lg:col-span-2' : ''} w-full`}>
+    <div data-aos='fade-up' className={`rounded-2xl px-4 py-6 shadowed flex flex-col items-center lg:items-start bg-white ${wide ? 'lg:col-span-2' : ''} w-full`}>
         <Image
             src={`/outsource/${num}.svg`}
             alt="Icon"
@@ -13,7 +13,7 @@ const Card = ({ num, title, text, wide }: { num: number, title: string, text: st
             height={45}
             className="w-8 h-8 lg:w-[45px] lg:h-[45px]"
         />
-        <H bold level={4}>{title}</H>
+        <H noAos bold level={4}>{title}</H>
         <p className='text-base lg:text-lg text-left-adapt'>{text}</p>
     </div>
 
@@ -25,7 +25,7 @@ const Outsource = () => {
                 <div className="flex flex-col items-center lg:items-start">
                     <OverTitle transparent>Освободите Ваше время</OverTitle>
                     <H level={2}>Аутсорсинг колл-центра</H>
-                    <p className='mt-2 text-lg text-left-adapt'>
+                    <p data-aos='fade-up' className='mt-2 text-lg text-left-adapt'>
                         Доверьте обработку звонков профессионалам и сосредоточьтесь на юридической практике. Наш колл-центр работает 24/7, обеспечивая непрерывную связь с вашими клиентами
                     </p>
                     <Button mt={1} className='hidden lg:block'>Заказать услугу</Button>

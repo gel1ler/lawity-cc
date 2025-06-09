@@ -5,6 +5,7 @@ import "./styles/anims.css";
 import '@/components/layout/layout.css'
 import Header from "@/components/layout/header/header";
 import Footer from "@/components/layout/footer";
+import AOSProvider from "@/components/layout/AOSProvider";
 
 const raleway = Raleway({
   subsets: ["latin", "cyrillic"],
@@ -23,9 +24,11 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className="w-screen overflow-x-hidden">
+        {/* <AOSProvider> */}
         <Header />
         {children}
         <Footer />
+        {/* </AOSProvider> */}
       </body>
     </html>
   );

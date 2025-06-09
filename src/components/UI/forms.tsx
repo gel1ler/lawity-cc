@@ -1,5 +1,6 @@
 export const Input = ({ placeholder, value, setValue }: { placeholder: string, value: string, setValue: (val: string) => void }) => (
     <input
+        data-aos='fade-up'
         value={value}
         onChange={e => setValue(e.target.value)}
         type="text"
@@ -9,7 +10,7 @@ export const Input = ({ placeholder, value, setValue }: { placeholder: string, v
 );
 
 export const Checkbox = ({ label, checked, onChange }: { label: string, checked: boolean, onChange: () => void }) => (
-    <label className="inline-flex items-center cursor-pointer w-full max-w-full overflow-hidden">
+    <label data-aos='fade-up' className="inline-flex items-center cursor-pointer w-full max-w-full overflow-hidden">
         <input
             type="checkbox"
             checked={checked}
@@ -67,6 +68,7 @@ export const PhoneInput = ({ placeholder, value, setValue }: { placeholder: stri
 
     return (
         <input
+            data-aos='fade-up'
             type="tel"
             value={value}
             onChange={handleChange}

@@ -4,6 +4,7 @@ import { LinkText } from '../../UI/text'
 import Drawer from './drawer';
 import { links } from '@/globalData';
 import Logo from '@/components/UI/logo';
+import BackCall from './backCall';
 
 const Header = () => {
     return (
@@ -34,13 +35,7 @@ const Header = () => {
                         height={30}
                         alt='WhatsApp'
                     />
-                    <div className="hidden lg:flex flex-col items-center">
-                        <div className="flex gap-2">
-                            <Image src='/social/phone.svg' width={20} height={20} alt='Phone' />
-                            <p className='font-inter'>+7 (929) 511-55-49</p>
-                        </div>
-                        <p>Обратный звонок</p>
-                    </div>
+                    <BackCall />
                     <Drawer links={links} />
                 </div>
             </div>

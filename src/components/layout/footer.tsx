@@ -72,7 +72,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='gap-4 flex-col-center-till-lg'>
-                    <H level={2}>Познакомтесь ближе c экосистемой Lawity</H>
+                    <H noAos level={2}>Познакомтесь ближе c экосистемой Lawity</H>
                     <BigLink>CRM-система для юристов</BigLink>
                     <hr />
                     <BigLink>Маркетплейс Lawity</BigLink>

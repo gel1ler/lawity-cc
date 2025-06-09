@@ -4,6 +4,7 @@ import { LinkText } from '@/components/UI/text'
 import { TLink } from '@/globalTypes'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
+import BackCall from './backCall'
 
 const Drawer = ({ links }: { links: TLink[] }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -59,6 +60,7 @@ const Drawer = ({ links }: { links: TLink[] }) => {
                         <Image src='/social/tg.svg' width={40} height={40} alt='Telegram' className="hover:opacity-80 transition-opacity" />
                         <Image src='/social/wa.svg' width={40} height={40} alt='WhatsApp' className="hover:opacity-80 transition-opacity" />
                     </div>
+                    <BackCall noHid />
                 </div>
             </div>
         </>

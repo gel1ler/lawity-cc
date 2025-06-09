@@ -31,7 +31,7 @@ const Contacts = () => {
                     <H className='text-center' level={2}>Готовы начать сотрудничество?</H>
                     <div className="grid grid-cols-1 md:grid-cols-2 max-w-[1000px] px-4 md:px-10 mt-10 gap-10 md:gap-0">
                         <div className="order-2 md:order-1 flex flex-col items-center md:items-start gap-4">
-                            <p className='text-lg text-center md:text-left max-w-xl'>
+                            <p data-aos='fade-up' className='text-lg text-center md:text-left max-w-xl'>
                                 Заполните форму, мы свяжемся и обсудим
                                 детали интеграции решений в ваши
                                 внутренние процессы
@@ -48,16 +48,16 @@ const Contacts = () => {
 
                         <div className="order-1 md:order-2 flex flex-col items-center">
                             <H level={3} bold>Свяжитесь с нами</H>
-                            <div className="flex gap-4 mt-2">
+                            <div data-aos='fade-up' className="flex gap-4 mt-2">
                                 <Image src='/social/tg.svg' className='aspect-square' width={35} height={35} alt='Telegram' />
                                 <Image src='/social/wa.svg' className='aspect-square' width={35} height={35} alt='WhatsApp' />
                             </div>
-                            <div className="flex gap-2 mt-2">
+                            <div data-aos='fade-up' className="flex gap-2 mt-2">
                                 <Image src='/social/phone.svg' width={20} height={20} alt='Phone' />
                                 <p className='font-inter text-lg'>+7 (929) 511-55-49</p>
                             </div>
                             <H level={4} bold>victory.s5@mail.ru</H>
-                            <p>123022, Москва, ул. Улица, 15, стр. 18</p>
+                            <p data-aos='fade-up'>123022, Москва, ул. Улица, 15, стр. 18</p>
                         </div>
                     </div>
                 </div>

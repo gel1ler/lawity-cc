@@ -3,10 +3,10 @@ import { Button } from '@/components/UI/buttons'
 import { H, OverTitle } from '@/components/UI/text'
 import Image from 'next/image'
 import React from 'react'
-import Carousel from '../../UI/carousel/carousel'
+import Carousel from './carousel'
 
 const Item = ({ num, title, text }: { num: number, title: string, text: string }) =>
-    <div className="flex items-center gap-4 max-w-xl">
+    <div data-aos='fade-up' className="flex items-center gap-4 max-w-xl">
         <Image
             src={`/clients/${num}.png`}
             alt="Icon"
@@ -14,7 +14,7 @@ const Item = ({ num, title, text }: { num: number, title: string, text: string }
             height={50}
         />
         <div>
-            <H level={5} bold noCenter>{title}</H>
+            <H noAos level={5} bold noCenter>{title}</H>
             <p className='-mt-4'>{text}</p>
         </div>
     </div>
@@ -24,7 +24,7 @@ const Crm = () => {
         <WidthAnimatedSection background='white' container='lg' noPb id='crm'>
             <OverTitle transparent>Управление практикой</OverTitle>
             <H level={2}>CRM-система для юристов</H>
-            <p className='text-lg max-w-2xl text-center'>Специализированное программное обеспечение для эффективного управления юридической практикой</p>
+            <p data-aos='fade-up' className='text-lg max-w-2xl text-center'>Специализированное программное обеспечение для эффективного управления юридической практикой</p>
             <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-5 items-center mt-10">
                 <Carousel />
                 <div className="flex flex-col gap-5">

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { Slide, SliderRef } from './interfaces'
+import { Slide, SliderRef } from '../../../../interfaces'
 
 const Miniatures = ({ slides, sliderRef, currentSlide, absolute }: { slides: Slide[], sliderRef: SliderRef, currentSlide: number, absolute?: boolean }) => {
     return (

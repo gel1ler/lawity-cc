@@ -22,10 +22,11 @@ interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   children: React.ReactNode;
   bold?: boolean,
   noCenter?: boolean,
-
+  noAos?: boolean,
+  centered?: boolean,
 }
 
-export const H = ({ level, children, bold, className = '', noCenter, ...props }: HeadingProps) => {
+export const H = ({ level, children, bold, className = '', noCenter, centered, noAos, ...props }: HeadingProps) => {
   const Tag = `h${level}` as const;
 
   const baseStyles = 'my-3';
@@ -40,7 +41,8 @@ export const H = ({ level, children, bold, className = '', noCenter, ...props }:
 
   return (
     <Tag
-      className={`${baseStyles} ${levelStyles[level]} ${className} ${noCenter ? '' : 'text-center'} lg:text-left`}
+      data-aos={noAos ? '' : 'fade-up'}
+      className={`${baseStyles} ${levelStyles[level]} ${className} ${noCenter ? '' : 'text-center'} ${centered ? 'text-center' : 'lg:text-left'}`}
       {...props}
       style={bold ? { fontWeight: 600 } : {}}
     >
@@ -49,7 +51,13 @@ export const H = ({ level, children, bold, className = '', noCenter, ...props }:
   );
 };
 
-export const OverTitle = ({ transparent, children }: { transparent?: boolean, children: ReactNode }) =>
-  <p className={`px-3 py-1 rounded-full w-fit font-[600] ${transparent ? 'bg-purp-main-20 text-purp-dark' : 'bg-purp-dark'}`}>
+export const OverTitle = ({ transparent, children, big }: { transparent?: boolean, children: ReactNode, big?: boolean }) =>
+  <p
+    className={
+      `w-fit font-[600] ${transparent ? 'bg-purp-main-20 text-purp-dark' : 'bg-purp-dark'} 
+      ${big ? 'px-8 py-3 rounded-[25px] text-4xl text-white' : 'px-3 py-1 rounded-full'}`
+    }
+    data-aos='fade-up'
+  >
     {children}
   </p>

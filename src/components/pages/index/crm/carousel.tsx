@@ -4,8 +4,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
-import { NextArrow, PrevArrow } from './arrows';
-import { Slide } from './interfaces';
+import { NextArrow, PrevArrow } from '../../../UI/arrows';
+import { Slide } from '../../../../interfaces';
 import Miniatures from './miniatures';
 import FullscreenModal from './modal';
 
@@ -33,7 +33,7 @@ const Carousel: React.FC = () => {
     };
 
     return (
-        <div className="relative w-full max-w-xl mx-auto">
+        <div data-aos='fade-up' className="relative w-full max-w-xl mx-auto">
             <Slider
                 className='cursor-pointer'
                 ref={sliderRef}

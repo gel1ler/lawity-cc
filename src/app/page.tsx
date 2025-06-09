@@ -1,9 +1,9 @@
 import Partners from "@/components/pages/index/partners";
 import Clients from "@/components/pages/index/clients";
-import Crm from "@/components/pages/index/crm";
+import Crm from "@/components/pages/index/crm/crm";
 import Outsource from "@/components/pages/index/outsource";
 import Priorities from "@/components/pages/index/priorities";
-import Start from "@/components/pages/index/start";
+import Start from "@/components/pages/index/start/start";
 import { Metadata } from "next";
 import Contacts from "@/components/pages/contacts";
 

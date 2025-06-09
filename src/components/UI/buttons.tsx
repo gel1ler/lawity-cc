@@ -15,6 +15,7 @@ export const Button = ({
 }: ButtonProps) => (
   <button
     disabled={disabled}
+    data-aos='fade-up'
     className={`
       px-5 py-2 text-lg
       ${disabled ? 'bg-gray-200 text-gray-400' : 'bg-purp-main hover:bg-purp-dark cursor-pointer text-white'} 
