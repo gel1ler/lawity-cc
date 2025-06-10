@@ -24,11 +24,11 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className="w-screen overflow-x-hidden">
-        {/* <AOSProvider> */}
+        <AOSProvider>
         <Header />
         {children}
         <Footer />
-        {/* </AOSProvider> */}
+        </AOSProvider>
       </body>
     </html>
   );
