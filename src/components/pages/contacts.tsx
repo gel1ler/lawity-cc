@@ -4,20 +4,30 @@ import { H } from '../UI/text'
 import Image from 'next/image'
 import { Checkbox, Input, PhoneInput } from '../UI/forms'
 import { Button } from '../UI/buttons'
+import { Notification } from '../UI/notification'
 
 const Contacts = () => {
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
     const [checked, setChecked] = useState(false);
     const [disabled, setDisabled] = useState(true)
+    const [showNotification, setShowNotification] = useState(false)
 
     useEffect(() => {
-        if (name != '' && phone.length == 18 && checked) {
+        if (name && phone.length === 18 && checked) {
             setDisabled(false)
         } else {
             setDisabled(true)
         }
     }, [name, phone, checked])
+
+    const send = () => {
+        // Здесь должна быть логика отправки формы
+        console.log('Форма отправлена:', { name, phone, checked })
+
+        // Показываем уведомление
+        setShowNotification(true)
+    }
 
     return (
         <section
@@ -43,7 +53,7 @@ const Contacts = () => {
                                 checked={checked}
                                 onChange={() => setChecked(!checked)}
                             />
-                            <Button disabled={disabled} />
+                            <Button disabled={disabled} onClick={send} />
                         </div>
 
                         <div className="order-1 md:order-2 flex flex-col items-center">
@@ -62,6 +72,12 @@ const Contacts = () => {
                     </div>
                 </div>
             </div>
+
+            <Notification
+                message="Форма успешно отправлена!"
+                isVisible={showNotification}
+                onClose={() => setShowNotification(false)}
+            />
         </section>
     )
 }

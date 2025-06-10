@@ -51,13 +51,13 @@ export const H = ({ level, children, bold, className = '', noCenter, centered, n
   );
 };
 
-export const OverTitle = ({ transparent, children, big }: { transparent?: boolean, children: ReactNode, big?: boolean }) =>
+export const OverTitle = ({ transparent, children, big, noAos }: { transparent?: boolean, children: ReactNode, big?: boolean, noAos?: boolean }) =>
   <p
     className={
       `w-fit font-[600] ${transparent ? 'bg-purp-main-20 text-purp-dark' : 'bg-purp-dark'} 
       ${big ? 'px-8 py-3 rounded-[25px] text-4xl text-white' : 'px-3 py-1 rounded-full'}`
     }
-    data-aos='fade-up'
+    data-aos={noAos ? '' : 'fade-up'}
   >
     {children}
   </p>

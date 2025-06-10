@@ -10,9 +10,9 @@ const Start = () => {
             className='flex justify-center gap-10 items-center pt-20 pb-[90vh] bg-light-gray px-10 relative w-screen overflow-x-hidden'
         >
             <div className="lg:flex flex-col items-center lg:items-start z-10 hidden">
-                <H level={1}>Рекламный колл-центр</H>
-                <H level={4}>Индивидуальный подход – гарантированный результат</H>
-                <Button />
+                <H noAos level={1}>Рекламный колл-центр</H>
+                <H noAos level={4}>Индивидуальный подход – гарантированный результат</H>
+                <Button noAos />
             </div>
 
             <Image
@@ -23,8 +23,8 @@ const Start = () => {
                 height={485}
             />
 
-            <div className="flex flex-col">
-                <OverTitle big>Рекламный колл-центр</OverTitle>
+            <div className="flex flex-col lg:hidden">
+                <OverTitle noAos big>Рекламный колл-центр</OverTitle>
                 <Carousel />
             </div>
         </div >
