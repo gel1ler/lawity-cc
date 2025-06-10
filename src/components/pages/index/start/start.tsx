@@ -23,7 +23,7 @@ const Start = () => {
                 height={485}
             />
 
-            <div className="flex flex-col lg:hidden">
+            <div className="flex flex-col lg:hidden w-screen">
                 <OverTitle noAos big>Рекламный колл-центр</OverTitle>
                 <Carousel />
             </div>
