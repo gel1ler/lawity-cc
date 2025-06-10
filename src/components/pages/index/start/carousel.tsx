@@ -39,14 +39,14 @@ const Carousel: React.FC = () => {
             >
                 {slides.map((slide) => (
                     <div key={slide.id} className="p-4 overflow-visible  min-h-[50vh]">
-                        <H noCenter level={2}>{slide.h}</H>
-                        <H noCenter level={4}>{slide.p}</H>
+                        <H level={2}>{slide.h}</H>
+                        <H level={4}>{slide.p}</H>
                         <Image
                             src={slide.image}
                             alt={`Slide ${slide.id}`}
                             className="aspect-square object-cover rounded-lg absolute top-1/2 -translate-y-1/2 right-0 -z-10 opacity-15 mt-10"
-                            width={420}
-                            height={420}
+                            width={350}
+                            height={350}
                         />
                     </div>
                 ))}
