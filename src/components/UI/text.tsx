@@ -55,7 +55,7 @@ export const OverTitle = ({ transparent, children, big, noAos }: { transparent?:
   <p
     className={
       `w-fit font-[600] ${transparent ? 'bg-purp-main-20 text-purp-dark' : 'bg-purp-dark'} 
-      ${big ? 'px-8 py-3 rounded-[25px] text-4xl text-white' : 'px-3 py-1 rounded-full'}`
+      ${big ? 'px-6 py-3 rounded-[25px] text-3xl text-white' : 'px-3 py-1 rounded-full'}`
     }
     data-aos={noAos ? '' : 'fade-up'}
   >
