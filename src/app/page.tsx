@@ -20,7 +20,7 @@ export default function Home() {
       <Clients />
       <Outsource />
       <Crm />
-      <Partners />
+      {/* <Partners /> */}
       <Contacts />
     </main>
   );

@@ -8,6 +8,7 @@ interface ButtonProps {
   className?: string;
   disabled?: boolean
   noAos?: boolean
+  couldBeDisabled?: boolean
   onClick?: () => void
 }
 
@@ -17,6 +18,7 @@ export const Button = ({
   className = '',
   disabled,
   noAos,
+  couldBeDisabled,
   onClick
 }: ButtonProps) => {
   const router = useRouter()
@@ -28,13 +30,12 @@ export const Button = ({
     } else {
       router.push('/#contacts');
     }
-  };
-
+  }
 
   return (
     <button
       disabled={disabled}
-      data-aos={noAos || !disabled ? '' : 'fade-up'}
+      data-aos={noAos || couldBeDisabled && !disabled ? '' : 'fade-up'}
       className={`
       px-5 py-2 text-lg
       ${disabled ? 'bg-gray-200 text-gray-400' : 'bg-purp-main hover:bg-purp-dark cursor-pointer text-white active:scale-95 transform-gpu'} 

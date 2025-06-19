@@ -33,31 +33,33 @@ const Carousel: React.FC = () => {
     };
 
     return (
-        <div data-aos='fade-up' className="relative w-full max-w-xl mx-auto">
-            <Slider
-                className='cursor-pointer'
-                ref={sliderRef}
-                {...settings}
-            >
-                {slides.map((slide) => (
-                    <div key={slide.id} className="p-4 relative">
-                        <Image
-                            src={slide.image}
-                            alt={`Slide ${slide.id}`}
-                            className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
-                            width={544}
-                            height={320}
-                            onClick={() => setIsModalOpen(true)}
-                        />
-                    </div>
-                ))}
-            </Slider>
-            <Miniatures
-                slides={slides}
-                sliderRef={sliderRef}
-                currentSlide={currentSlide}
-            />
+        <>
+            <div data-aos='fade-up' className="relative w-full max-w-xl mx-auto">
+                <Slider
+                    className='cursor-pointer'
+                    ref={sliderRef}
+                    {...settings}
+                >
+                    {slides.map((slide) => (
+                        <div key={slide.id} className="p-4 relative">
+                            <Image
+                                src={slide.image}
+                                alt={`Slide ${slide.id}`}
+                                className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                                width={544}
+                                height={320}
+                                onClick={() => setIsModalOpen(true)}
+                            />
+                        </div>
+                    ))}
+                </Slider>
+                <Miniatures
+                    slides={slides}
+                    sliderRef={sliderRef}
+                    currentSlide={currentSlide}
+                />
 
+            </div>
             {/* Модальное окно */}
             <FullscreenModal
                 isOpen={isModalOpen}
@@ -65,7 +67,7 @@ const Carousel: React.FC = () => {
                 slides={slides}
                 initialSlide={currentSlide}
             />
-        </div>
+        </>
     );
 };
 
