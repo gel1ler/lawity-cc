@@ -6,6 +6,7 @@ import '@/components/layout/layout.css'
 import Header from "@/components/layout/header/header";
 import Footer from "@/components/layout/footer";
 import AOSProvider from "@/components/layout/AOSProvider";
+import Backdrop from "@/components/UI/backdrop";
 
 const raleway = Raleway({
   subsets: ["latin", "cyrillic"],
@@ -25,10 +26,11 @@ export default function RootLayout({
       </head>
       <body className="overflow-x-hidden min-w-[400px]">
         <AOSProvider>
-        <Header />
-        {children}
-        <Footer />
+          <Header />
+          {children}
+          <Footer />
         </AOSProvider>
+        <Backdrop />
       </body>
     </html>
   );

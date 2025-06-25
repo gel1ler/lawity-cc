@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { H } from '../UI/text'
 import Image from 'next/image'
 import { Checkbox, Input, PhoneInput } from '../UI/forms'
-import { Button } from '../UI/buttons'
+import { Button, TgWa } from '../UI/buttons'
 import { Notification } from '../UI/notification'
 
 const Contacts = () => {
@@ -58,10 +58,7 @@ const Contacts = () => {
 
                         <div className="order-1 md:order-2 flex flex-col items-center">
                             <H level={3} bold>Свяжитесь с нами</H>
-                            <div data-aos='fade-up' className="flex gap-4 mt-2">
-                                <Image src='/social/tg.svg' className='aspect-square' width={35} height={35} alt='Telegram' />
-                                <Image src='/social/wa.svg' className='aspect-square' width={35} height={35} alt='WhatsApp' />
-                            </div>
+                            <TgWa large mt={2} fadeUp />
                             <div data-aos='fade-up' className="flex gap-2 mt-2">
                                 <Image src='/social/phone.svg' width={20} height={20} alt='Phone' />
                                 <p className='font-inter text-lg'>+7 (929) 511-55-49</p>

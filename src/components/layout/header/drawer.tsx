@@ -5,6 +5,7 @@ import { TLink } from '@/globalTypes'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import BackCall from './backCall'
+import { TgWa } from '@/components/UI/buttons'
 
 const Drawer = ({ links }: { links: TLink[] }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -56,10 +57,7 @@ const Drawer = ({ links }: { links: TLink[] }) => {
                             {i.text}
                         </LinkText>
                     ))}
-                    <div className="flex gap-6 pt-8">
-                        <Image src='/social/tg.svg' width={40} height={40} alt='Telegram' className="hover:opacity-80 transition-opacity" />
-                        <Image src='/social/wa.svg' width={40} height={40} alt='WhatsApp' className="hover:opacity-80 transition-opacity" />
-                    </div>
+                    <TgWa large mt={8} />
                     <BackCall noHid />
                 </div>
             </div>

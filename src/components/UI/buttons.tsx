@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ReactNode } from "react";
 
@@ -46,5 +47,33 @@ export const Button = ({
     >
       {children || "Оставить заявку"}
     </button >
+  )
+}
+
+export const TgWa = ({ large, mt, fadeUp, smHidden }: { large?: boolean, mt?: number, fadeUp?: boolean, smHidden?: boolean }) => {
+  const size = large ? 40 : 30
+  return (
+    <div
+      data-aos={fadeUp ? 'fade-up' : ''}
+      className={`${smHidden ? "hidden md:flex" : "flex"} gap-5`}
+      style={{ marginTop: mt }}
+    >
+      <a href="https://t.me/+79295115549" target="_blank">
+        <Image
+          src='/social/tg.svg'
+          width={size}
+          height={size}
+          alt='Telegram'
+        />
+      </a>
+      <a href="https://wa.me/79295115549?" target="_blank">
+        <Image
+          src='/social/wa.svg'
+          width={size}
+          height={size}
+          alt='WhatsApp'
+        />
+      </a>
+    </div >
   )
 }

@@ -5,6 +5,7 @@ import Drawer from './drawer';
 import { links } from '@/globalData';
 import Logo from '@/components/UI/logo';
 import BackCall from './backCall';
+import { TgWa } from '@/components/UI/buttons';
 
 const Header = () => {
     return (
@@ -22,19 +23,7 @@ const Header = () => {
                 </div>
 
                 <div className="flex gap-5 items-center">
-                    <Image
-                        className='hidden md:block'
-                        src='/social/tg.svg'
-                        width={30}
-                        height={30}
-                        alt='Telegram' />
-                    <Image
-                        className='hidden md:block'
-                        src='/social/wa.svg'
-                        width={30}
-                        height={30}
-                        alt='WhatsApp'
-                    />
+                    <TgWa smHidden />
                     <BackCall />
                     <Drawer links={links} />
                 </div>
