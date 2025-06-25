@@ -53,7 +53,7 @@ const Contacts = () => {
                                 checked={checked}
                                 onChange={() => setChecked(!checked)}
                             />
-                            <Button disabled={disabled} onClick={send} />
+                            <Button couldBeDisabled disabled={disabled} onClick={send} />
                         </div>
 
                         <div className="order-1 md:order-2 flex flex-col items-center">

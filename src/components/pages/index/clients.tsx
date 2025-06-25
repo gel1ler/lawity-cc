@@ -71,8 +71,6 @@ const Clients = () => {
                     height={680}
                 />
             </div>
-
-
         </WidthAnimatedSection>
     )
 }
