@@ -1,4 +1,4 @@
-import Partners from "@/components/pages/index/partners";
+// import Partners from "@/components/pages/index/partners";
 import Clients from "@/components/pages/index/clients";
 import Crm from "@/components/pages/index/crm/crm";
 import Outsource from "@/components/pages/index/outsource";
