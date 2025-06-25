@@ -50,12 +50,12 @@ const WidthAnimatedSection = ({ background, children, color, container, row, noP
             id={id}
             ref={ref}
             className={`rounded-t-[20px] lg:rounded-t-[50px] pt-10 ${noPb ? 'pb-20' : 'pb-[90vh]'} -mt-[80vh] overflow-hidden 
-                max-w-screen z-10 ${noBorder ? '' : 'border-gray-line border-t border-l border-r'}
+                 z-10 ${noBorder ? '' : 'border-gray-line border-t border-l border-r'}
                 ${className}`}
             style={{
                 background,
                 color,
-                width
+                width: isLargeScreen ? width : '100%'
             }}
         >
             <div

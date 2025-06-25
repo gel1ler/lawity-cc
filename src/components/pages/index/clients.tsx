@@ -21,7 +21,20 @@ const Card = ({ num, title, text }: { num: number, title: string, text: string }
 
 const Clients = () => {
     return (
-        <WidthAnimatedSection background='#303030' color='white' noBorder id='clients'>
+        <WidthAnimatedSection background='#303030' color='white' noBorder id='clients' className='relative'>
+            {/* <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-purple-600/10 to-transparent pointer-events-none z-0"></div> */}
+
+            <div className="absolute inset-0 z-0 pointer-events-none">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover opacity-50"
+                    src="/videos/smoke31.mp4"
+                />
+            </div>
+
             <OverTitle>Для юристов и адвокатов</OverTitle>
             <H className='text-white' level={2}>Клиенты под ключ</H>
             <p data-aos='fade-up' className='text-lg text-left-adapt'>Комплексные решения для юридических практик любого масштаба</p>

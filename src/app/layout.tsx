@@ -23,7 +23,7 @@ export default function RootLayout({
         <link rel='image/svg+xml' href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className="w-screen overflow-x-hidden">
+      <body className="overflow-x-hidden min-w-[400px]">
         <AOSProvider>
         <Header />
         {children}

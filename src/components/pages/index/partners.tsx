@@ -40,7 +40,7 @@ const RunningLine = () => {
 
 const Partners = () => {
     return (
-        <div className="bg-white w-screen flex flex-col items-center py-20 px-2">
+        <div className="bg-white w-full flex flex-col items-center py-20 px-2">
             <H className='text-center' level={2}>Наши клиенты и кейсы</H>
             <p data-aos='fade-up' className='text-lg max-w-2xl text-center'>Примеры успешного сотрудничества с юридическими компаниями</p>
             <RunningLine />
