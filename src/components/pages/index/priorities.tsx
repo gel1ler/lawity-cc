@@ -1,5 +1,5 @@
 import WidthAnimatedSection from '@/components/layout/widthAnimatedSection'
-import { Button } from '@/components/UI/buttons'
+import { Button } from '@/components/forms/buttons'
 import { H } from '@/components/UI/text'
 import Image from 'next/image'
 import React from 'react'

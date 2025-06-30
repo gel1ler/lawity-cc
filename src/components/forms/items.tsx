@@ -1,16 +1,24 @@
-export const Input = ({ placeholder, value, setValue }: { placeholder: string, value: string, setValue: (val: string) => void }) => (
+export const Input = ({ 
+    placeholder, value, setValue
+ }: { 
+    placeholder: string, value: string, setValue: (val: string) => void
+ }) => (
     <input
         data-aos='fade-up'
         value={value}
         onChange={e => setValue(e.target.value)}
         type="text"
-        className="w-full px-4 py-3 bg-white border-gray-line border-2 rounded-lg focus:border-purp-main outline-none transition-colors duration-300"
+        className="w-full px-4 py-3 text-black-main bg-white border-gray-line border-2 rounded-lg focus:border-purp-main outline-none transition-colors duration-300"
         placeholder={placeholder}
     />
 );
 
-export const Checkbox = ({ label, checked, onChange }: { label: string, checked: boolean, onChange: () => void }) => (
-    <label data-aos='fade-up' className="inline-flex items-center cursor-pointer w-full max-w-full overflow-hidden">
+export const Checkbox = ({
+    label, checked, onChange, white, center
+}: {
+    label: string, checked: boolean, onChange: () => void, white?: boolean, center?: boolean
+}) => (
+    <label data-aos='fade-up' className={`inline-flex items-center cursor-pointer ${center ? 'w-fit' : 'w-full'} overflow-hidden`}>
         <input
             type="checkbox"
             checked={checked}
@@ -26,7 +34,7 @@ export const Checkbox = ({ label, checked, onChange }: { label: string, checked:
                 </svg>
             )}
         </span>
-        <p className="text-gray-700 text-sm whitespace-nowrap overflow-hidden text-ellipsis flex-grow min-w-0">
+        <p className={`${white ? 'white' : 'text-gray-700'} text-sm whitespace-nowrap overflow-hidden text-ellipsis flex-grow min-w-0`}>
             {label}
         </p>
     </label>
@@ -72,7 +80,7 @@ export const PhoneInput = ({ placeholder, value, setValue }: { placeholder: stri
             type="tel"
             value={value}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white border-gray-line border-2 rounded-lg focus:border-purp-main outline-none transition-colors duration-300"
+            className="text-black-main w-full px-4 py-3 bg-white border-gray-line border-2 rounded-lg focus:border-purp-main outline-none transition-colors duration-300"
             placeholder={placeholder}
             maxLength={18} // Максимальная длина форматированного номера
         />

@@ -1,34 +1,11 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { H } from '../UI/text'
 import Image from 'next/image'
-import { Checkbox, Input, PhoneInput } from '../UI/forms'
-import { Button, TgWa } from '../UI/buttons'
-import { Notification } from '../UI/notification'
+import { TgWa } from '../forms/buttons'
+import ContactsForm from '../forms/contactsForm'
 
 const Contacts = () => {
-    const [name, setName] = useState('')
-    const [phone, setPhone] = useState('')
-    const [checked, setChecked] = useState(false);
-    const [disabled, setDisabled] = useState(true)
-    const [showNotification, setShowNotification] = useState(false)
-
-    useEffect(() => {
-        if (name && phone.length === 18 && checked) {
-            setDisabled(false)
-        } else {
-            setDisabled(true)
-        }
-    }, [name, phone, checked])
-
-    const send = () => {
-        // Здесь должна быть логика отправки формы
-        console.log('Форма отправлена:', { name, phone, checked })
-
-        // Показываем уведомление
-        setShowNotification(true)
-    }
-
     return (
         <section
             className='bg-white w-full'
@@ -40,22 +17,7 @@ const Contacts = () => {
                 >
                     <H className='text-center' level={2}>Готовы начать сотрудничество?</H>
                     <div className="grid grid-cols-1 md:grid-cols-2 max-w-[1000px] px-4 md:px-10 mt-10 gap-10 md:gap-0">
-                        <div className="order-2 md:order-1 flex flex-col items-center md:items-start gap-4">
-                            <p data-aos='fade-up' className='text-lg text-center md:text-left max-w-xl'>
-                                Заполните форму, мы свяжемся и обсудим
-                                детали интеграции решений в ваши
-                                внутренние процессы
-                            </p>
-                            <Input placeholder='Ваше имя' value={name} setValue={setName} />
-                            <PhoneInput placeholder='+7 (999) 999-99-99' value={phone} setValue={setPhone} />
-                            <Checkbox
-                                label='Я соглашаюсь с политикой конфиденциальности'
-                                checked={checked}
-                                onChange={() => setChecked(!checked)}
-                            />
-                            <Button couldBeDisabled disabled={disabled} onClick={send} />
-                        </div>
-
+                        <ContactsForm />
                         <div className="order-1 md:order-2 flex flex-col items-center">
                             <H level={3} bold>Свяжитесь с нами</H>
                             <TgWa large mt={2} fadeUp />
@@ -70,11 +32,6 @@ const Contacts = () => {
                 </div>
             </div>
 
-            <Notification
-                message="Форма успешно отправлена!"
-                isVisible={showNotification}
-                onClose={() => setShowNotification(false)}
-            />
         </section>
     )
 }

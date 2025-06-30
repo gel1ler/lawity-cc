@@ -1,11 +1,10 @@
-import Image from 'next/image'
 import React from 'react'
 import { LinkText } from '../../UI/text'
 import Drawer from './drawer';
 import { links } from '@/globalData';
 import Logo from '@/components/UI/logo';
 import BackCall from './backCall';
-import { TgWa } from '@/components/UI/buttons';
+import { TgWa } from '@/components/forms/buttons';
 
 const Header = () => {
     return (

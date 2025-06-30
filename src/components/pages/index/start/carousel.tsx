@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
 import { Slide } from '@/interfaces';
 import { NextArrow, PrevArrow } from '@/components/UI/arrows';
-import { Button } from '@/components/UI/buttons';
+import { Button } from '@/components/forms/buttons';
 import { H } from '@/components/UI/text';
 
 const Carousel: React.FC = () => {

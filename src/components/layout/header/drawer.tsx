@@ -2,10 +2,9 @@
 import Logo from '@/components/UI/logo'
 import { LinkText } from '@/components/UI/text'
 import { TLink } from '@/globalTypes'
-import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import BackCall from './backCall'
-import { TgWa } from '@/components/UI/buttons'
+import { TgWa } from '@/components/forms/buttons'
 
 const Drawer = ({ links }: { links: TLink[] }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)

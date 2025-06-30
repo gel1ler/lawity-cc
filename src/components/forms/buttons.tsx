@@ -29,7 +29,7 @@ export const Button = ({
     if (onClick) {
       onClick();
     } else {
-      router.push('/#contacts');
+      router.push('/?backdrop=true', { scroll: false });
     }
   }
 

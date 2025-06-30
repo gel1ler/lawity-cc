@@ -7,6 +7,8 @@ import Header from "@/components/layout/header/header";
 import Footer from "@/components/layout/footer";
 import AOSProvider from "@/components/layout/AOSProvider";
 import Backdrop from "@/components/UI/backdrop";
+import { ToastProvider } from "@/components/UI/toast/useToast";
+import { Suspense } from "react";
 
 const raleway = Raleway({
   subsets: ["latin", "cyrillic"],
@@ -26,12 +28,16 @@ export default function RootLayout({
       </head>
       <body className="overflow-x-hidden min-w-[400px]">
         <AOSProvider>
-          <Header />
-          {children}
-          <Footer />
+          <ToastProvider>
+            <Header />
+            {children}
+            <Footer />
+            <Suspense>
+              <Backdrop />
+            </Suspense>
+          </ToastProvider>
         </AOSProvider>
-        <Backdrop />
       </body>
-    </html>
+    </html >
   );
 }

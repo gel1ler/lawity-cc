@@ -1,4 +1,3 @@
-import Backdrop from '@/components/UI/backdrop'
 import Image from 'next/image'
 import React from 'react'
 
@@ -11,7 +10,6 @@ const BackCall = ({ noHid }: { noHid?: boolean }) =>
             </div>
             <p>Обратный звонок</p>
         </div>
-        <Backdrop />
     </>
 
 export default BackCall
