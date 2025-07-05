@@ -7,7 +7,7 @@ import React from 'react'
 const Start = () => {
     return (
         <div
-            className='pt-20 pb-[90vh] bg-light-gray md:px-10 px-1 relative w-full overflow-x-hidden'
+            className='pt-20 pb-[90vh] bg-light-gray md:px-10 px-1 relative w-full overflow-x-hidden flex justify-center'
         >
             <div className="flex justify-center gap-10 items-center max-h-[60vh]">
                 <div className="lg:flex flex-col items-center lg:items-start z-10 hidden max-w-[400px] sm:max-w-screen">
@@ -20,7 +20,7 @@ const Start = () => {
                 <Image
                     // src='/start/start.svg'
                     src='/start/start2.png'
-                    className='hidden lg:block translate-y-[30vh]'
+                    className='hidden lg:block pt-[550px]'
                     alt='Start'
                     // width={400}
                     // height={385}

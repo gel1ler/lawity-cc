@@ -25,7 +25,7 @@ const Contacts = () => {
                                 <Image src='/social/phone.svg' width={20} height={20} alt='Phone' />
                                 <p className='font-inter text-lg'>+7 (929) 511-55-49</p>
                             </div>
-                            <H level={4} bold>victory.s5@mail.ru</H>
+                            <H level={4} bold>victory@lawity.ru</H>
                             <p data-aos='fade-up'>123022, Москва, ул. Улица, 15, стр. 18</p>
                         </div>
                     </div>

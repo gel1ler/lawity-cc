@@ -58,7 +58,7 @@ export const TgWa = ({ large, mt, fadeUp, smHidden }: { large?: boolean, mt?: nu
       className={`${smHidden ? "hidden md:flex" : "flex"} gap-5`}
       style={{ marginTop: mt }}
     >
-      <a href="https://t.me/+79295115549" target="_blank">
+      <a href="https://t.me/victoryi55" target="_blank">
         <Image
           src='/social/tg.svg'
           width={size}

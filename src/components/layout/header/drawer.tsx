@@ -28,7 +28,7 @@ const Drawer = ({ links }: { links: TLink[] }) => {
         <>
             {/* Кнопка гамбургера */}
             <button
-                className="xl:hidden flex flex-col gap-1.5 w-6 z-50 relative"
+                className="lg:hidden flex flex-col gap-1.5 w-6 z-50 relative"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Меню"
             >
