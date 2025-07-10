@@ -18,7 +18,7 @@ export default function Home() {
     <main className="bg-light-gray flex flex-col items-center">
       <Start />
       <Priorities />
-      <About />
+      {/* <About /> */}
       <Clients />
       <Outsource />
       <Crm />
