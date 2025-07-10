@@ -23,10 +23,10 @@ const Contacts = () => {
                             <TgWa large mt={2} fadeUp />
                             <div data-aos='fade-up' className="flex gap-2 mt-2">
                                 <Image src='/social/phone.svg' width={20} height={20} alt='Phone' />
-                                <p className='font-inter text-lg'>+7 (929) 511-55-49</p>
+                                <p className='font-inter text-lg'>+7 (905) 555-59-54</p>
                             </div>
                             <H level={4} bold>victory@lawity.ru</H>
-                            <p data-aos='fade-up'>123022, Москва, ул. Улица, 15, стр. 18</p>
+                            <p data-aos='fade-up'>140185, Жуковский, улица Амет-хан Султана, 7А</p>
                         </div>
                     </div>
                 </div>

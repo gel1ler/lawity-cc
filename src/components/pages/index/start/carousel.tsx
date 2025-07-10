@@ -25,7 +25,7 @@ const Carousel: React.FC = () => {
         slidesToScroll: 1,
         arrows: false, // Отключаем стандартные стрелки
         fade: true,
-        autoplay: true
+        // autoplay: true
     };
 
     return (
@@ -34,13 +34,18 @@ const Carousel: React.FC = () => {
             {/* Слайдер */}
             <Slider
                 ref={sliderRef}
-                className='cursor-pointer overflow-visible'
                 {...settings}
             >
                 {slides.map((slide) => (
                     <div key={slide.id} className="p-4 overflow-visible  min-h-[50vh]">
-                        <H level={2}>{slide.h}</H>
-                        <H level={4}>{slide.p}</H>
+                        <H
+                            noAos
+                            level={2}
+                            style={{ width: '100%' }}
+                        >
+                            {slide.h}
+                        </H>
+                        <H noAos level={4}>{slide.p}</H>
                         <Image
                             src={slide.image}
                             alt={`Slide ${slide.id}`}

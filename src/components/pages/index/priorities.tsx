@@ -29,7 +29,7 @@ const Element = ({ reverse, title, text, num, btn }: { reverse?: boolean, btn?: 
 const Priorities = () => {
     return (
         <WidthAnimatedSection background='white'>
-            <H level={2}>Наш главный приоритет</H>
+            <H underline level={2}>Наш главный приоритет</H>
             <div className="flex flex-col max-w-[1000px] items-center gap-10 sm:gap-0">
                 <Element
                     title='Стабильность и гарантия результата'
