@@ -6,7 +6,7 @@ import Priorities from "@/components/pages/index/priorities";
 import Start from "@/components/pages/index/start/start";
 import { Metadata } from "next";
 import Contacts from "@/components/pages/contacts";
-import About from "@/components/pages/index/about";
+// import About from "@/components/pages/index/about";
 
 export const metadata: Metadata = {
   title: "Lawity колл-центр",
