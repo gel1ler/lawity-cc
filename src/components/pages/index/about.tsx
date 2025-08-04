@@ -9,9 +9,11 @@ const About = () => {
         <WidthAnimatedSection background='#F5F5F5' container='lg' id='outsource'>
             <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-5 items-center mt-10">
                 <div className="flex flex-col items-center lg:items-start">
-                    <H level={2} underline>Обо мне</H>
+                    <H level={2} underline>Приветствую вас!</H>
                     <p data-aos='fade-up' className='mt-2 text-lg text-left-adapt'>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, rem autem magnam quas non, numquam minus dolorum sequi eos cum quaerat officiis molestias error quod ipsam culpa et a sapiente!
+                        Меня зовут Виктория, я основатель рекламного колл-центра, который дал старт совместно с командой разработчиков CRM-систем для других колл-центров.
+                        Я надеюсь, что мой труд как для заказчиков рекламы так и для пользователей CRM будет способствовать росту и развитию вашего бизнеса. Мы рады совершенствовать и улучшать качество услуг из года в год.<br />
+                        {/* С уважением к вам. */}
                     </p>
                     <Button mt={1} className='hidden lg:block'>Связаться со мной</Button>
                 </div>
