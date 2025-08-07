@@ -37,7 +37,7 @@ const Backdrop = () => {
 
   return (
     <div
-      className='fixed inset-0 bg-[rgba(0,0,0,.8)] z-[1000] flex flex-col items-center justify-center transition-opacity'
+      className='fixed inset-0 bg-[rgba(0,0,0,.9)] z-[1000] flex flex-col items-center justify-center transition-opacity'
       style={{
         opacity: show ? 1 : 0,
         pointerEvents: show ? 'inherit' : 'none',
@@ -59,7 +59,7 @@ const Backdrop = () => {
       </div>
 
       <Image
-        className='absolute overflow-visible -z-10 -left-[100px] -top-[100px] hidden lg:block'
+        className='absolute overflow-visible -z-10 -right-0 bottom-0 hidden lg:block'
         src={`/logo/text.svg`}
         alt="Lawity bg"
         width={1000}
