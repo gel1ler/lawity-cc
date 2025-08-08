@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Checkbox, Input, PhoneInput } from './items';
 import { Button } from './buttons';
 import { useToast } from '../UI/toast/useToast';
+import { send } from '@emailjs/browser';
 
 const ContactsForm = ({ white, center, handleClose }: { white?: boolean, center?: boolean, handleClose?: () => void }) => {
     const [name, setName] = useState('')
@@ -20,10 +21,30 @@ const ContactsForm = ({ white, center, handleClose }: { white?: boolean, center?
         }
     }, [name, phone, checked])
 
-    const send = () => {
-        console.log('Форма отправлена:', { name, phone, checked })
-        showToast({ message: 'Форма успешно отправлена!', type: 'success' })
-        if (handleClose) handleClose()
+    const handleSubmit = async () => {
+        if (disabled) return
+
+        try {
+            const templateParams = {
+                from_name: `name`,
+                to_email: 'victory@lawity.ru',
+                message: `Новая заявка:\nИмя: ${name}`,
+                phone: `Номер телефона: ${phone}`,
+            };
+
+            await send(
+                'service_qukwfec',
+                'template_0nsn2fp',    // ← замените
+                templateParams,
+                'orI8OxXQKj9YCadsc'      // ← замените
+            );
+
+            console.log('Форма отправлена:', { name, phone, checked })
+            showToast({ message: 'Форма успешно отправлена!', type: 'success' })
+            if (handleClose) handleClose()
+        } catch (error) {
+            console.error('Ошибка EmailJS:', error);
+        }
     }
 
     return (
@@ -35,7 +56,7 @@ const ContactsForm = ({ white, center, handleClose }: { white?: boolean, center?
                 <p data-aos='fade-up' className={`text-lg text-center ${center ? '' : 'md:text-left'} max-w-xl`}>
                     Заполните форму, мы свяжемся и обсудим
                     детали интеграции решений в ваши
-                    внутренние процессы
+                    внутренние процессыывап
                 </p>
                 <Input placeholder='Ваше имя' value={name} setValue={setName} />
                 <PhoneInput placeholder='+7 (999) 999-99-99' value={phone} setValue={setPhone} />
@@ -46,7 +67,7 @@ const ContactsForm = ({ white, center, handleClose }: { white?: boolean, center?
                     checked={checked}
                     onChange={() => setChecked(!checked)}
                 />
-                <Button couldBeDisabled disabled={disabled} onClick={send} />
+                <Button couldBeDisabled disabled={disabled} onClick={handleSubmit} />
             </div>
         </>
     )
