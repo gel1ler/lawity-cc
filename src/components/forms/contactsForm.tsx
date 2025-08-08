@@ -28,15 +28,14 @@ const ContactsForm = ({ white, center, handleClose }: { white?: boolean, center?
             const templateParams = {
                 from_name: `name`,
                 to_email: 'victory@lawity.ru',
-                message: `Новая заявка:\nИмя: ${name}`,
-                phone: `Номер телефона: ${phone}`,
+                message: `Новая заявка:\nИмя - ${name}\nНомер телефона - ${phone}`,
             };
 
             await send(
-                'service_qukwfec',
-                'template_0nsn2fp',    // ← замените
+                'service_r4uuowf',
+                'template_05ge5ne',    // ← замените
                 templateParams,
-                'orI8OxXQKj9YCadsc'      // ← замените
+                'u9RoXlbZrjZrlV5dk'      // ← замените
             );
 
             console.log('Форма отправлена:', { name, phone, checked })
