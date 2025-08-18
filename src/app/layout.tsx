@@ -26,6 +26,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" type="image/svg+xml" />
         <link rel='image/svg+xml' href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/favicon.ico" sizes="any" />
+        <YandexMetrika />
       </head>
       <body className="overflow-x-hidden min-w-[400px]">
         <AOSProvider>
@@ -38,8 +39,6 @@ export default function RootLayout({
             </Suspense>
           </ToastProvider>
         </AOSProvider>
-
-        <YandexMetrika />
       </body>
     </html>
   );
