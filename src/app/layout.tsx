@@ -8,6 +8,7 @@ import Footer from "@/components/layout/footer";
 import AOSProvider from "@/components/layout/AOSProvider";
 import Backdrop from "@/components/UI/backdrop";
 import { ToastProvider } from "@/components/UI/toast/useToast";
+import YandexMetrika from "@/YandexMetrika";
 import { Suspense } from "react";
 
 const raleway = Raleway({
@@ -37,7 +38,9 @@ export default function RootLayout({
             </Suspense>
           </ToastProvider>
         </AOSProvider>
+
+        <YandexMetrika />
       </body>
-    </html >
+    </html>
   );
 }
