@@ -4,6 +4,7 @@ import Script from 'next/script';
 
 declare global {
     interface Window {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ym: (id: number, action: string, options?: any) => void;
     }
 }
@@ -30,6 +31,7 @@ export default function YandexMetrika() {
             />
             <noscript>
                 <div>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="https://mc.yandex.ru/watch/103795671"
                         style={{ position: 'absolute', left: '-9999px' }}
