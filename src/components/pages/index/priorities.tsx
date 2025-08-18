@@ -14,7 +14,7 @@ const Element = ({ reverse, title, text, num, btn }: { reverse?: boolean, btn?: 
         <Image
             data-aos='fade-up'
             src={`/priorities/${num}.svg`}
-            className={`${reverse ? 'col-start-2' : ''} max-w-[70vw] sm:max-w-[40vw]`}
+            className={`${reverse ? 'col-start-2' : ''} max-w-[70vw] sm:max-w-[40vw] max-h-[500px]`}
             width={500}
             height={500}
             alt={title}
