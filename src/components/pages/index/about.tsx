@@ -6,7 +6,7 @@ import React from 'react'
 
 const About = () => {
     return (
-        <WidthAnimatedSection background='#F5F5F5' container='lg' id='outsource'>
+        <WidthAnimatedSection background='#fff' container='lg' id='outsource'>
             <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-5 items-center mt-10">
                 <div className="flex flex-col items-center lg:items-start">
                     <H level={2} underline>Приветствую вас!</H>

@@ -7,6 +7,7 @@ import Start from "@/components/pages/index/start/start";
 import { Metadata } from "next";
 import Contacts from "@/components/pages/contacts";
 import About from "@/components/pages/index/about";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Lawity колл-центр",
@@ -15,9 +16,18 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-light-gray flex flex-col items-center">
+    <main className="bg-light-gray flex flex-col items-center relative">
+      <Image
+        src='/start/dots.svg'
+        className='hidden lg:block absolute top-0 right-0'
+        alt='Start'
+        // width={400}
+        // height={385}
+        width={964}
+        height={582}
+      />
       <Start />
-      <Priorities />
+      {/* <Priorities /> */}
       <About />
       <Clients />
       <Outsource />
